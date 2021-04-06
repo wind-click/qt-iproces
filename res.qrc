@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/addaf.png</file>
+        <file>res/addpre.png</file>
+        <file>res/adjust.png</file>
+        <file>res/mainp.png</file>
+        <file>res/waterbgp.jpg</file>
+        <file>res/add.png</file>
+        <file>res/bright.png</file>
+        <file>res/area graph.png</file>
+        <file>res/delete.png</file>
+        <file>res/design.png</file>
+        <file>res/openfile.png</file>
+        <file>res/save.png</file>
+        <file>res/undo.png</file>
+        <file>res/histogram.png</file>
+    </qresource>
+</RCC>

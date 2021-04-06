@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>476</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgba(255, 255, 255, 0);</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="GraphicsView" name="leftGraphicsView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="acceptDrops">
+           <bool>false</bool>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="SolidPattern">
+            <color alpha="200">
+             <red>204</red>
+             <green>204</green>
+             <blue>204</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="GraphicsView" name="rightGraphicsView">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="focusPolicy">
+           <enum>Qt::NoFocus</enum>
+          </property>
+          <property name="acceptDrops">
+           <bool>true</bool>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="SolidPattern">
+            <color alpha="200">
+             <red>202</red>
+             <green>202</green>
+             <blue>202</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>950</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar{border:0px;
+color:rgba(180, 180, 180, 200);}
+QMenuBar::item:selected{
+border:0px;
+color:rgb(255, 255, 255);
+}</string>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="styleSheet">
+     <string notr="true">QMenu{
+background-color: rgba(170, 170, 170,50);
+border:0px;}
+QMenu::item{
+	color: rgba(202, 202, 202, 200);
+}
+
+QMenu::item:selected{
+color:rgb(255, 255, 255);
+}</string>
+    </property>
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionAdd"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionUndo"/>
+   </widget>
+   <widget class="QMenu" name="menuBasic">
+    <property name="styleSheet">
+     <string notr="true">QMenu{
+background-color: rgba(170, 170, 170,50);
+border:0px;}
+QMenu::item{
+	color: rgba(202, 202, 202, 200);
+}
+
+QMenu::item:selected{
+color:rgb(255, 255, 255);
+}</string>
+    </property>
+    <property name="title">
+     <string>Basic</string>
+    </property>
+    <addaction name="actionHistogram"/>
+    <addaction name="actionBrightness"/>
+   </widget>
+   <widget class="QMenu" name="menuEnhancement">
+    <property name="styleSheet">
+     <string notr="true">QMenu{
+background-color: rgba(170, 170, 170,50);
+border:0px;}
+QMenu::item{
+	color: rgba(202, 202, 202, 200);
+}
+
+QMenu::item:selected{
+color:rgb(255, 255, 255);
+}</string>
+    </property>
+    <property name="title">
+     <string>Enhance</string>
+    </property>
+    <addaction name="actionRetinex"/>
+   </widget>
+   <widget class="QMenu" name="menuDEnoise">
+    <property name="styleSheet">
+     <string notr="true">QMenu{
+background-color: rgba(170, 170, 170,50);
+border:0px;}
+QMenu::item{
+	color: rgba(202, 202, 202, 200);
+}
+
+QMenu::item:selected{
+color:rgb(255, 255, 255);
+}</string>
+    </property>
+    <property name="title">
+     <string>Denoise</string>
+    </property>
+    <addaction name="actionMedia_Filter"/>
+   </widget>
+   <widget class="QMenu" name="menuSuper_reslove">
+    <property name="styleSheet">
+     <string notr="true">QMenu{
+background-color: rgba(170, 170, 170,50);
+border:0px;}
+QMenu::item{
+	color: rgba(202, 202, 202, 200);
+}
+
+QMenu::item:selected{
+color:rgb(255, 255, 255);
+}</string>
+    </property>
+    <property name="title">
+     <string>Super-reslove</string>
+    </property>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuBasic"/>
+   <addaction name="menuEnhancement"/>
+   <addaction name="menuDEnoise"/>
+   <addaction name="menuSuper_reslove"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAdd">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/addpre.png</normaloff>:/res/addpre.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/delete.png</normaloff>:/res/delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/save.png</normaloff>:/res/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveAs</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/undo.png</normaloff>:/res/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionHistogram">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/histogram.png</normaloff>:/res/histogram.png</iconset>
+   </property>
+   <property name="text">
+    <string>Histogram</string>
+   </property>
+  </action>
+  <action name="actionBrightness">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/res/bright.png</normaloff>:/res/bright.png</iconset>
+   </property>
+   <property name="text">
+    <string>Brightness</string>
+   </property>
+  </action>
+  <action name="actionMedia_Filter">
+   <property name="text">
+    <string>Media_Filter</string>
+   </property>
+  </action>
+  <action name="actionRetinex">
+   <property name="text">
+    <string>Retinex</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsView</class>
+   <extends>QGraphicsView</extends>
+   <header>graphicsview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
